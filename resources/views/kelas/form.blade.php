@@ -3,16 +3,23 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title"></h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> 
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
             <div class="modal-body">
-                <p>One fine body…</p>
-            </div>
-            <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                
+                <form action="" method="POST">
+                     @csrf
+                     @method('PUT')
+
+                     <div class="form-group">
+                         <label for="nama">Nama</label>
+                         <input type="text" class="form-control" name="nama" id="nama">
+                     </div>  
+                     <button type="submit" class="btn btn-success btn-flat btn-sm">Simpan</button>
+                </form>
+
             </div>
         </div>
 

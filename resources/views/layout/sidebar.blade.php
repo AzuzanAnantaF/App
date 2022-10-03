@@ -19,7 +19,7 @@
                         data-accordion="false">
 
                         <li class="nav-header">DASHBOARD</li>
-                            <a href="/" class="nav-link">
+                            <a href="/" class="nav-link {{ request()->is('dashboar*')? 'active' :'' }}">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -28,28 +28,28 @@
                         </li>
 
                         <li class="nav-header">MASTER</li>
-                            <a href="{{ route('guru.index') }}" class="nav-link">
+                            <a href="{{ route('guru.index') }}" class="nav-link {{ request()->is('guru*')? 'active' :'' }}">
                                 <i class="fas fa-user"></i>
                                 <p>
                                     Guru
                                 </p>
                             </a>
 
-                            <a href="{{ route('kelas.index') }}" class="nav-link">
+                            <a href="{{ route('kelas.index') }}" class="nav-link {{ request()->is('kelas*')? 'active' :'' }}">
                                 <i class="fas fa-chalkboard-teacher"></i>
                                 <p>
                                     Kelas
                                 </p>
                             </a>
 
-                            <a href="{{ route('mapel.index') }}" class="nav-link">
+                            <a href="{{ route('mapel.index') }}" class="nav-link {{ request()->is('mapel*')? 'active' :'' }}">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
                                     Mapel
                                 </p>
                             </a>
 
-                            <a href="/siswa" class="nav-link">
+                            <a href="/siswa" class="nav-link {{ request()->is('siswa*')? 'active' :'' }}">
                                 <i class="nav-icon fas fa-users"></i>
                                 <p>
                                     Siswa
