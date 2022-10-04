@@ -22,7 +22,7 @@
                          <label for="jenis_kelamin">Jenis kelamin</label>
                          <select name="jenis_kelamin" id="jenis_kelamin" class="form-control">
                             <option value="Perempuan">Perempuan</option>
-                            <option value="Laki - Laki">Laki - Laki</option>
+                            <option value="Laki-Laki">Laki - Laki</option>
                          </select>
                      </div>
 

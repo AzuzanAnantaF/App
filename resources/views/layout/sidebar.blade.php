@@ -19,7 +19,7 @@
                         data-accordion="false">
 
                         <li class="nav-header">DASHBOARD</li>
-                            <a href="/" class="nav-link {{ request()->is('dashboar*')? 'active' :'' }}">
+                            <a href="{{ route ('dashboard.index') }}" class="nav-link {{ request()->is('dashboar*')? 'active' :'' }}">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard

@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <table class="table table-hover text-nowrap">
+                        <table class="table table-hover text-nowrap" style="width: 100%">
                             <thead>
                                 <tr>
                                     <th>No</th>
@@ -54,7 +54,7 @@
 <script>
 
     let table;
-    
+
     $(function() {
         table = $('.table').DataTable({
             proccesing: true,
@@ -98,13 +98,13 @@
     function addForm(url){
         $('#modalForm').modal('show');
         $('#modalForm .modal-title').text('Tambah Data');
-
+        
         $('#modalForm form')[0].reset();
         $('#modalForm form').attr('action', url);
         $('#modalForm [name=_method]').val('post');
     }
 
-    function editData(){
+    function editData(url){
         $('#modalForm').modal('show');
         $('#modalForm .modal-title').text('Edit Data Guru');
 
@@ -122,9 +122,8 @@
         })
     }
 
-        
     function hapusData(url){
-        
+
         swal({
             title: "Yakin ingin menghapus data ini?",
             text: "Jika Anda Klik Ok Maka data akan terhapus!",
@@ -157,7 +156,7 @@
                 return;
             })
 
-            table.ajax.reload();
+            table.ajax.reload(); 
             }
         });
     }
